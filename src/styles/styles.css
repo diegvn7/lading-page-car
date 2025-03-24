@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 600px;
+    gap: 10%;
+    z-index: 1;
+}
+
+header img {
+    width: 250px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+section {
+    background-image: radial-gradient(#7f3d9e, #6d00d9);
+    height: 100vh;
+}
+
+.list {
+    position: relative;
+    width: 70vw;
+    height: 100%;
+    margin: auto;
+}
+
+.list::before {
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 100%;
+    top: 50%;
+    border-top: 1px solid #fff;
+}
+
+div.list .item {
+    position: absolute;
+    inset: 0;
+}
+
+.car-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+}
+
+div.car-img img {
+    width: 100%;
+    transform: rotate(-20deg);
+}
+
+div.item .content {
+    display: flex;
+    position: absolute;
+    right: 100px;
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
+}
+
+div.content .car-information {
+    font-weight: bold;
+}
+
+div.content h2 {
+    font-size: 8em;
+    line-height: 1em;
+    font-family: 'league gothic';
+
+}
+
+div.content .description {
+    color: #d9d9d9;
+    font-size: 12px;
+    text-align: right;
+    max-width: 400px;
+    font-family: 'league gothic';
+}
+
+div.content .information {
+    border-radius: 30px;
+    height: 35px;
+    width: 120px;
+    font-weight: bolder;
+    border: 2px solid #791fd3;
+    background-color: #beff1b;
+    color: #000;
+    cursor: pointer;
+}
+
+.arrows {
+    width: 70vw;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25px);
+    justify-content: space-between;
+}
+
+div.arrows > button {
+    top: 60%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+div.arrows > button:hover {
+    background-color: #beff1b;
+}
+
+div.arrows > button > img {
+    width: 30px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+div.arrows > button:nth-child(1) {
+    transform: scale(-1);
+}
+
+.indicators {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: 90vw;
+}
+
+div.indicators .number {
+    font-size: 5em;
+    font-family: 'league gothic';
+}
+
+div.indicators ul{
+    display: flex;
+    gap: 10px;
+}
+
+div.indicators li {
+    width: 50px;
+    height: 5px;
+    background-color: #beff1b;
+    border-radius: 5px;
+    transition: 0.5s;
+    list-style: none;
+}
+
+div.indicators .active {
+    background-color: #fff;
+}
